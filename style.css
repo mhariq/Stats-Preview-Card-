@@ -1,0 +1,149 @@
+/* ### Primary
+
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6) */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  padding: 3rem;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "open sans", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 1.2rem;
+  max-width: 120rem;
+  margin: 10% auto;
+  background-color: hsl(244, 38%, 16%);
+  overflow: hidden;
+}
+
+.img-box {
+  width: 100%;
+  background-image: linear-gradient(
+      hsla(277, 64%, 61%, 0.226),
+      hsla(277, 64%, 61%, 0.308)
+    ),
+    url(images/image-header-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.text {
+  padding: 6rem 8rem;
+}
+
+.insights {
+  color: hsl(277, 64%, 61%);
+}
+
+h1 {
+  margin-bottom: 3.2rem;
+  color: white;
+  font-size: 3.8rem;
+}
+
+.main-text {
+  margin-bottom: 6rem;
+  line-height: 1.7;
+}
+
+.detail-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-box p {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.stats {
+  font-size: 2.4rem !important;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.8rem;
+}
+
+.attribution {
+  text-align: center;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: hsl(277, 64%, 61%);
+}
+
+@media (max-width: 920px) {
+  html {
+    font-size: 80%;
+    text-align: center;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .img-box {
+    height: 50rem;
+    grid-row: 1;
+  }
+
+  .detail-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  .text {
+    padding: 4rem;
+  }
+}
+
+@media (max-width: 560px) {
+  html {
+    font-size: 50%;
+    text-align: center;
+  }
+
+  .img-box {
+    height: 40rem;
+  }
+}
+
+/* @media (max-width: 450px) {
+  html {
+    font-size: 60%;
+    text-align: center;
+  }
+
+  .img-box {
+    height: 40rem;
+  }
+} */
